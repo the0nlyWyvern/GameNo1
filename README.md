@@ -4,9 +4,18 @@
 
 # Description
 
+Timestamp: 1:33
+
+# Table of contents
+
+0.
+1.
+2.
+3.
+
 # Techniques
 
-## Moving object at constant speed
+## 1. Moving object at constant speed
 
 <img src="./screenshots/triangle.jpg" alt="triangle" width="50%">
 
@@ -35,12 +44,26 @@ if (distance > speedModifier) {
 }
 ```
 
-# Table of contents
+## 2. Animation angles
 
-0.
-1.
-2.
-3.
+<img src="./screenshots/calculateTheAngle.jpg" alt="Calculate the angle using arctan" width="50%">
+
+To calculate the angle from the character to target, use `arctan` with `dy, dx`. Result in radiant
+
+<img src="./screenshots/animitionAngle.jpg" alt="Animition angles" width="40%" />
+
+<img src="./screenshots/sliceOfBull.png" width="15%"/>
+
+```javascript
+if (angle < -2.74 || angle > 2.74) this.frameY = 6;
+else if (angle < -1.96) this.frameY = 7;
+else if (angle < -1.17) this.frameY = 0;
+else if (angle < -0.39) this.frameY = 1;
+else if (angle < 0.39) this.frameY = 2;
+else if (angle < 1.17) this.frameY = 3;
+else if (angle < 1.96) this.frameY = 4;
+else if (angle < 2.74) this.frameY = 5;
+```
 
 # Usage
 
