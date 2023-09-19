@@ -1,21 +1,43 @@
-# Learn Game Dev with Vanila Javascript
+# Learn Game Dev with Vanilla Javascript
 
 <img src="./screenshots" alt="illustration" width="100%" />
 
 # Description
 
-Timestamp: 1:33
+Timestamp: 2:14
 
 # Table of contents
 
 0.
-1.
-2.
-3.
+1. Draw a circle of collision
+2. Moving object at constant speed
+3. Animation angles
+4.
 
 # Techniques
 
-## 1. Moving object at constant speed
+## 1. Draw a circle of collision
+
+```javascript
+context.beginPath(); // tell js to begin to draw
+context.arc(
+	this.collisionX,
+	this.collisionY,
+	this.collisionRadius,
+	0,
+	Math.PI * 2
+);
+
+// to limit certain canvas settings only to specific draw calls, we can wrap that drawing code between save() and restore() built-in canvas methods.
+context.save(); // save all current settings
+context.globalAlpha = 0.5;
+context.fill();
+context.restore(); // restore all settings
+
+context.stroke();
+```
+
+## 2. Moving object at constant speed
 
 <img src="./screenshots/triangle.jpg" alt="triangle" width="50%">
 
@@ -44,7 +66,7 @@ if (distance > speedModifier) {
 }
 ```
 
-## 2. Animation angles
+## 3. Animation angles
 
 <img src="./screenshots/calculateTheAngle.jpg" alt="Calculate the angle using arctan" width="50%">
 
@@ -75,4 +97,4 @@ else if (angle < 2.74) this.frameY = 5;
 
 # References
 
-[Go to github]("https://github.com/the0nlyWyvern" "github.com")
+[Youtube - Javascript GameDev Tutorial]("https://www.youtube.com/watch?v=U34l-Xz5ynU" "freeCodeCamp")
